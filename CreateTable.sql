@@ -25,6 +25,7 @@ create table Teachermessage
     Tbelong char(10),               /*教师所归属的实验室*/
     FOREIGN KEY(Tbelong) REFERENCES Lab(Lno)    /*Tbelong显然是外码*/
 );
+
 create table ReserveTable           /*预约表*/
 (
     ReserveLabNo char(10),          /*预约的实验室的编号*/
