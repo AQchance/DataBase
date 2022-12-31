@@ -4,7 +4,7 @@ conn = pyodbc.connect("DRIVER={ODBC Driver 17 for SQL Server};SERVER=LAPTOP-IIB7
 cursor = conn.cursor()
 
 #插入实验室预约表的信息
-reservelabno = input("请输入预约实验室的编号")
+reservelabno = input("请输入预约实验室的编号：")
 reservepersonname = input("请输入预约教师姓名：")
 reservepersonphone = input("请输入预约教师的电话号码：")
 reservetime = input("请输入预约时间：")

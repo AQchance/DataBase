@@ -1,6 +1,6 @@
 import pyodbc
 
-conn = pyodbc.connect("DRIVER={ODBC Driver 17 for SQL Server};SERVER=localhost;DATABASE=test;UID=user;PWD=password")
+conn = pyodbc.connect("DRIVER={ODBC Driver 17 for SQL Server};SERVER=LAPTOP-IIB71O59;DATABASE=MYSQL;UID=sa;PWD=duxinpeng0627")
 cursor = conn.cursor()
 
 # 按照教师编号删除教师相关信息
@@ -18,7 +18,7 @@ conn.commit()
 cursor.execute("DELETE FROM Teachermessage WHERE Tphone=?", (tphone,))
 # 提交更改
 conn.commit()
-
+print("删除成功！")
 # 关闭连接
 cursor.close()
 conn.close()
