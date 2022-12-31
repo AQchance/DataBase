@@ -7,7 +7,7 @@ cursor = conn.cursor()
 tno = input("请输入要查询的教师的编号：")
 
 # 执行查询
-cursor.execute("SELECT * FROM Teacher, Teachermessage where Teacher.Tphone=Teachermessage.Tphone and Teacher.Tno=?",(tno,))
+ret=cursor.execute("SELECT * FROM Teacher, Teachermessage where Teacher.Tphone=Teachermessage.Tphone and Teacher.Tno=?",(tno,))
 
 # 获取所有查询结果
 results = cursor.fetchall()
@@ -15,7 +15,6 @@ results = cursor.fetchall()
 # 处理结果
 for row in results:
   print(row)
-
 # 关闭连接
 cursor.close()
 conn.close()
