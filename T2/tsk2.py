@@ -13,6 +13,7 @@ ret=cursor.execute("SELECT * FROM Teacher, Teachermessage where Teacher.Tphone=T
 results = cursor.fetchall()
 
 # 处理结果
+print("结果依次为：\n编号\n电话号码\n姓名\n所属实验室")
 for row in results:
   print(row)
 # 关闭连接

@@ -12,8 +12,8 @@ cursor.execute("SELECT * FROM ReserveTable where ReserveTime like ?",(time,))
 
 # 获取所有查询结果
 results = cursor.fetchall()
-
 # 处理结果
+print("实验室编号\t姓名\t电话号\t预约时间")
 for row in results:
   print(row)
 
