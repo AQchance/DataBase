@@ -20,7 +20,7 @@ create table Teacher
 
 create table Teachermessage
 (   
-    Tphone char(20) PRIMARY key,    /*教师的手机号码*/
+    Tphone char(20) PRIMARY key,    /*教师的电话号码*/
     Tname char(20),                 /*教师的姓名，可能有重名，因此不会存在传递性*/
     Tbelong char(10),               /*教师所归属的实验室*/
     FOREIGN KEY(Tbelong) REFERENCES Lab(Lno)    /*Tbelong显然是外码*/
