@@ -13,9 +13,10 @@ while flag!=1:
         flag=1
     else:
         print("两次密码输入不匹配，请重新输入")
+
 # 修改表
 cursor.execute("UPDATE Users SET passwd=? WHERE username=?", (user,password1))
-
+print("修改成功！")
 # 提交更改
 conn.commit()
 
